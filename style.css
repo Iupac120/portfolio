@@ -25,6 +25,7 @@ body{
     line-height: 1.5;
     font-size: 16px;
     font-family: 'poppins' sans-serif;
+    transition: all 0.4s ease-in-out;
 }
 
 *{
@@ -33,6 +34,7 @@ body{
     outline: none;
     text-decoration: none;
     box-sizing: border-box; 
+    
 }
 ::before,::after{
     box-sizing: border-box;
@@ -48,7 +50,9 @@ ul{
     display: block;
     padding: 0 30px;
     opacity: 1;
+    transition: all 0.4s ease-in-out
 }
+
 .hidden{
     display: none !important;
 }
@@ -67,8 +71,8 @@ ul{
     margin: auto;
 }
 .section .container{
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .section-title{
     flex: 0 0 100%;
@@ -77,7 +81,7 @@ ul{
   
 }
 .section-title h2{
-    font-size: 40px;
+    font-size: 30px;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
@@ -107,6 +111,15 @@ ul{
     margin-left: 15px;
     margin-right: 15px;
     position: relative;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: red;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 .btn {
     font-size: 16px;
@@ -235,10 +248,14 @@ ul{
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 5px 15px;
+
 }
-.aside .nav li a.active {
+/* .aside .nav li a.active {
     color: red;
-}
+} */
+/* .aside .nav li .active{
+    color: red;
+} */
 .aside .nav li a i {
     margin-right: 15px;
 }
@@ -284,20 +301,20 @@ h3.hello span{
 .home .home-img::after{
     content: '';
     position: absolute;
-    height: 80px;
+    /* height: 80px;
     width: 80px;
     border-bottom: 10px solid red;
-    border-right: 10px solid red;
+    border-right: 10px solid red; */
     right: 20px;
     bottom: -40px;
 }
 .home .home-img::before{
     content: '';
     position: absolute;
-    height: 80px;
+    /* height: 80px;
     width: 80px;
     border-top: 10px solid red;
-    border-left: 10px solid red;
+    border-left: 10px solid red; */
     left: 20px;
     top: -40px;
 }
@@ -476,7 +493,8 @@ h3.hello span{
 }
 /*--service section */
 .service .container{
-    padding-bottom: 40px;
+    padding-bottom: 10px;
+    margin-left: 230px;
 }
 .service .service-item{
     margin-bottom: 30px;
@@ -530,22 +548,25 @@ h3.hello span{
 }
 /*Portfolio section*/
 .portfolio .container{
-    padding-bottom: 40px;
+    padding-bottom: 10px;
+    margin-left: 230px;
+    overflow: hidden;
 }
 .portfolio .portfolio-heading{
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 90%;
+    max-width: 90%;
     background-color: red;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .portfolio .portfolio-heading h2{
     color: var(--text-black-900);
     font-weight: 500;
+    margin-left: 120px;
 }
 .portfolio .portfolio-item{
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    margin-bottom: 30px;
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 10px;
 }
 .portfolio .portfolio-item p{
     color: Blue;
@@ -555,7 +576,9 @@ h3.hello span{
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    
 }
+
 .portfolio .portfolio-img img{
     width: 100%;
     display: block;
@@ -575,7 +598,7 @@ h3.hello span{
 }
 .contact .contact-info-item{
     flex: 0 0 33.33%;
-    max-width: 33.33%;
+    max-width: 33.3%;
     text-align: center;
 }
 .contact .contact-info-item .icon{
@@ -584,6 +607,14 @@ h3.hello span{
 .contact .contact-info-item .icon .fa{
     font-size: 25px;
     color: red;
+    cursor: pointer;
+    
+}
+.contact .contact-info-item .icon .fa :hover{
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+    transition: yellow 0.4s ease-in-out;
 }
 .contact .contact-info-item h4{
     font-size: 18px;
@@ -598,10 +629,93 @@ h3.hello span{
     color: var(--text-black-700);
     font-weight: 400;
 }
+.email-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    padding: 10px 0px;
+}
+.email-contact .input-contact{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.email-contact .input-contact .name{
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.email-contact .input-contact .email{
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.email-contact .subject-contact .subject{
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.email-contact .area-contact .area{
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.email-contact .submit-btn{
+    
+    background-color: #222222;
+    
+    color: red;
+}
+.email-contact .submit-btn button{
+    background-color: #151515;
+    color: red;
+    cursor: pointer;
+    padding: 6px;
+    margin: 5px;
+    border-radius: 5px;
 
-@media(max-width:1199px){
-    .aside{
-        left: 270px;
+}
+.email-heading h2{
+    text-align: center;
+    background-color: brown;
+    color: white;
+    padding: 30px;
+    
+}
+right-contact{
+    position: absolute;
+    display: flex;
+    flex: 3;
+    margin-right: 3rem;
+    margin-top: 40px;
+    border-radius: 30px;
+    background-color: #f021b2;
+}
+input-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 2px;
+    padding: 0.8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color: #f021b2;
+    width: 100%;
+    color: #e8dfec;
+}
+
+
+
+@media screen and (max-width:1199px){
+    .home .home-img{
+        display: none;
     }
     .main-content{
         padding-left: 0;
@@ -610,13 +724,29 @@ h3.hello span{
         display: block;
         margin-left: 0;
     }
+    .aside .logo{
+        position: absolute;
+        top: 0px;
+        font-size: 5px;
+    }
+    .aside{
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+    
+    }
 }
-@media(max-width:991px){
+@media screen and (max-width:991px){
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item{
         flex: 0 0 50%;
         max-width: 100%;
+    }
+    .aside .logo{
+        position: absolute;
+        top: 0px;
+        font-size: 5px;
     }
     .home .home-info{
         flex: 0 0 100%;
@@ -625,8 +755,26 @@ h3.hello span{
     .home .home-img{
         display: none;
     }
+    .aside{
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .main-content{
+        padding-left: 0;
+    }
+    .home .container{
+        margin-left: 230px;
+    }
+    .about .container{
+        margin-left: 230px;
+    }
+    .contact .container{
+        margin-left: 230px;
+    }
 }
-@media(max-width:767px){
+@media screen and (max-width:767px){
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item,
@@ -636,5 +784,193 @@ h3.hello span{
     .about .about-content .personal-info{
         flex: 0 0 50%;
         max-width: 50%;
+    }
+    /* .aside{
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+    
+    } */
+    .main-content{
+        padding-left: 0;
+    }
+    .home .home-img{
+        display: none;
+    }
+    .aside .logo{
+        position: absolute;
+        top: 0px;
+        font-size: 5px;
+    }
+    .aside .nav{
+        margin-top: 10px;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 5px;
+        word-spacing: 1px;
+        
+    }
+    .nav{
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .aside .logo  {
+    
+    display: none;
+}
+.aside .nav-toggler {
+    display: none;
+
+}
+.aside .logo a ::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--bg-black-100);
+    border-left: 5px solid var(--bg-black-100);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a ::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--bg-black-100);
+    border-right: 5px solid var(--bg-black-100);
+    top: 0;
+    right: 0;
+}
+  
+    .main-content{
+        padding-left: 0;
+    }
+    .home .home-img{
+        display: none;
+    }
+    .aside{
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+        width: 270px;
+        height: 30px;
+
+    }
+    .aside .nav li a {
+        font-size: 8px;
+        font-weight: 600;
+        display: block;
+        border-bottom: 1px solid var(--bg-black-50);
+        color: var(--text-black-900);
+        padding: 2px 2px;
+        position: relative;
+        margin-top: 5px;
+    
+    }
+    .portfolio .container{
+    padding-bottom: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.service .container{
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+}
+
+@media screen and (max-width:600px) {
+    .aside .nav{
+        margin-top: 10px;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 5px;
+        word-spacing: 1px;
+        
+    }
+
+    
+    
+    .nav{
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .aside .logo  {
+    
+    display: none;
+    }
+.aside .nav-toggler {
+    display: none;
+
+}
+.section{
+    min-height: 100%;
+}
+.aside .logo a ::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--bg-black-100);
+    border-left: 5px solid var(--bg-black-100);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a ::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--bg-black-100);
+    border-right: 5px solid var(--bg-black-100);
+    top: 0;
+    right: 0;
+}
+  
+    .main-content{
+        padding-left: 0;
+    }
+    .home .home-img{
+        display: none;
+    }
+    .aside{
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+        width: 270px;
+        height: 30px;
+
+    }
+    .aside .nav li a {
+        font-size: 8px;
+        font-weight: 600;
+        display: block;
+        border-bottom: 1px solid var(--bg-black-50);
+        color: var(--text-black-900);
+        padding: 2px 2px;
+        position: relative;
+        margin-top: 5px;
+    
+    }
+    .portfolio .container{
+    padding-bottom: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+    .service .container{
+    padding-bottom: 10px;
+    margin-left: 10px;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        position: relative;
     }
 }

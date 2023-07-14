@@ -569,7 +569,7 @@ h3.hello span{
     margin-bottom: 10px;
 }
 .portfolio .portfolio-item p{
-    color: Blue;
+    color: red;
 }
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
